@@ -3,7 +3,7 @@ FROM node:7-onbuild
 
 
 ARG test1
-ARG tets2
+ARG test2
 ARG test3
 
 ENV TEST1=$test1
