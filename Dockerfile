@@ -1,6 +1,16 @@
 # use a node base image
 FROM node:7-onbuild
 
+
+ARG test1
+ARG tets2
+ARG test3
+
+ENV TEST1=$test1
+ENV TEST2=$test2
+ENV TEST3=$test3
+
+
 # set maintainer
 LABEL maintainer "miiro@getintodevops.com"
 
