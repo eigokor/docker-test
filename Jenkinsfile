@@ -16,7 +16,7 @@ volumes:[
       stage('Build image') {
           /* This builds the actual image; synonymous to
            * docker build on the command line */
-          app = docker.build("eigokor/hellonode", "--build-arg=test", "test")
+          app = docker.build("eigokor/hellonode")
       }
       stage('Test image') {
           /* Ideally, we would run a test framework against our image.
