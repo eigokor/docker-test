@@ -7,6 +7,7 @@ volumes:[
     hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),
 ]){
   node ('docker-test-pipeline'){
+    container('docker') {
       def app
       stage('Clone repository') {
           /* Let's make sure we have the repository cloned to our workspace */
@@ -34,5 +35,6 @@ volumes:[
               app.push("latest")
           }
       }
+    }
   }
 }
